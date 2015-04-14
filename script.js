@@ -1,4 +1,5 @@
 // Directives & Views
+// filters - Basic format:expression |filterName:parameter
 
 (function() {
 
@@ -26,6 +27,7 @@
 
         $scope.username = "angular"
         $scope.message = "GitHub Viewer";
+        $scope.repoSortOrder = "-stargazers_count";
 
     };
 
