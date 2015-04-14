@@ -15,7 +15,21 @@
 </head>
 
 <body ng-controller="MainController">
-    <h1>{{message}}</h1> {{ 432 / 42 }}
+	<!-- view -->
+    <h1>{{message}}</h1>
+    <ul>
+    	<li>Multiple controllers</li>
+    	<li>Complex objects</li>
+    	<li>Nest controllers</li>
+    </ul>
+
+    <div>
+    	<div>First name: {{person.firstName}}</div>
+    	<div>Last name: {{person.lastName}}</div>
+    	<div>
+    		<img ng-src="{{person.imageSrc}}" title="{{person.firstName}} {{person.lastname}}">
+    	</div>
+    </div>
 </body>
 
 </html>
