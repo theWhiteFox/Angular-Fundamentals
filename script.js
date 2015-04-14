@@ -7,16 +7,24 @@
 
         function onUserComplete(response) {
             $scope.user = response.data;
+            $http.get($scope.user.repos_url)
+                .then(onRepos, onError);
         };
+
+        var onRepos = function(response) {
+        	$scope.repos = response.data;
+        }
 
         function onError(reason) {
-        	$scope.error = "Could not fetch the user";
+            $scope.error = "Could not fetch the user";
         };
 
-        $http.get("https://api.github.com/users/stevo5o")
-            .then(onUserComplete, onError);
+        $scope.search = function(username) {
+            $http.get("https://api.github.com/users/" + username)
+                .then(onUserComplete, onError);
+        };
 
-        #4scope.username = "angular"
+        $scope.username = "angular"
         $scope.message = "GitHub Viewer";
 
     };
