@@ -15,23 +15,21 @@
 </head>
 
 <body ng-controller="MainController">
-	<!-- view -->
+    <!-- view -->
     <h1>{{message}}</h1>
-    <div>
-    <h2>GitHub API</h2>
-        <ul>
-            <li>Available from JS in a browser</li>
-            <li>Returns JSON (easy to convert into objects</li>
-            <li>No authentication or clint key required</li>
-        </ul>
-    </div>
     <div>{{error}}</div>
+
+    {{ username }}
+    <form name="searchUser">
+        <input type="search" placeholder="Username to find" ng-model="username">
+        <input type="submit" value="search">
+    </form>
     <div>
-    	<div>Name: {{user.name}}</div>
-    	<div>Location: {{user.location}}</div>
-    	<div>
-    		<img ng-src="{{user.avatar_url}}" title="{{user.name}}">
-    	</div>
+        <div>Name: {{user.name}}</div>
+        <div>Location: {{user.location}}</div>
+        <div>
+            <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+        </div>
     </div>
 </body>
 

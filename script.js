@@ -1,6 +1,4 @@
-// Controller Capabilities
-// seperation of concerns
-// MVC
+// Directives & Views
 
 (function() {
 
@@ -18,9 +16,8 @@
         $http.get("https://api.github.com/users/stevo5o")
             .then(onUserComplete, onError);
 
-        // model
-        $scope.message = "Hello, Angular!";
-
+        #4scope.username = "angular"
+        $scope.message = "GitHub Viewer";
 
     };
 
