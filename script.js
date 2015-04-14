@@ -4,22 +4,27 @@
 
 (function() {
 
-	// controller
-    function MainController($scope) {
+    // controller
+    function MainController($scope, $http) {
 
-    	var person = {
-    		firstName: "SteJ",
-    		lastName: "O'Connor",
-    		imageSrc: "http://stephenoconnor.azurewebsites.net/images/HeadShot.jpg"
-    	};
+        function onUserComplete(response) {
+            $scope.user = response.data;
+        };
 
-    	// model
+        function onError(reason) {
+        	$scope.error = "Could not fetch the user";
+        };
+
+        $http.get("https://api.github.com/users/stevo5o")
+            .then(onUserComplete, onError);
+
+        // model
         $scope.message = "Hello, Angular!";
-        $scope.person = person;
+
 
     };
 
     angular.module('app', [])
-        .controller('MainController', ["$scope", MainController]);
+        .controller('MainController', ["$scope", '$http', MainController]);
 
 }()); // end IFFE

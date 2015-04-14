@@ -17,17 +17,20 @@
 <body ng-controller="MainController">
 	<!-- view -->
     <h1>{{message}}</h1>
-    <ul>
-    	<li>Multiple controllers</li>
-    	<li>Complex objects</li>
-    	<li>Nest controllers</li>
-    </ul>
-
     <div>
-    	<div>First name: {{person.firstName}}</div>
-    	<div>Last name: {{person.lastName}}</div>
+    <h2>GitHub API</h2>
+        <ul>
+            <li>Available from JS in a browser</li>
+            <li>Returns JSON (easy to convert into objects</li>
+            <li>No authentication or clint key required</li>
+        </ul>
+    </div>
+    <div>{{error}}</div>
+    <div>
+    	<div>Name: {{user.name}}</div>
+    	<div>Location: {{user.location}}</div>
     	<div>
-    		<img ng-src="{{person.imageSrc}}" title="{{person.firstName}} {{person.lastname}}">
+    		<img ng-src="{{user.avatar_url}}" title="{{user.name}}">
     	</div>
     </div>
 </body>
