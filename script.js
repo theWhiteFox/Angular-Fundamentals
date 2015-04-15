@@ -4,7 +4,7 @@
 (function() {
 
     // controller
-    function MainController($scope, $http) {
+    function MainController($scope, $http, $interval) {
 
         function onUserComplete(response) {
             $scope.user = response.data;
@@ -13,11 +13,22 @@
         };
 
         var onRepos = function(response) {
-        	$scope.repos = response.data;
+            $scope.repos = response.data;
         }
 
         function onError(reason) {
             $scope.error = "Could not fetch the user";
+        };
+
+        function decrementCountdown() {
+            $scope.countdown -= 1;
+            if ($scope.countdown < 1) {
+                $scope.search($scope.username);
+            }
+        };
+
+        function startCountdown() {
+            $interval(decrementCountdown, 1000, $scope.countdown);
         };
 
         $scope.search = function(username) {
@@ -28,10 +39,12 @@
         $scope.username = "angular"
         $scope.message = "GitHub Viewer";
         $scope.repoSortOrder = "-stargazers_count";
+        $scope.countdown = 5;
+        startCountdown();
 
     };
 
     angular.module('app', [])
-        .controller('MainController', ["$scope", '$http', MainController]);
+        .controller('MainController', ["$scope", '$http', '$interval', MainController]);
 
 }()); // end IFFE

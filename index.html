@@ -14,11 +14,11 @@
     <script src="script.js"></script>
 </head>
 
-<body ng-controller="MainController">
-    <!-- view -->
+<body ng-controller="MainController">    
     <h1>{{message}}</h1>
     <div>{{error}}</div>
-    {{ username }}
+    
+    {{countdown}}
     <form name="searchUser">
         <input type="search" placeholder="Username to find" ng-model="username" />
         <input type="submit" value="Search" ng-click="search(username)">
