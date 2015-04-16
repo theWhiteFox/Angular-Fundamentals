@@ -50,7 +50,7 @@
 
     };
 
-    angular.module('app', [])
+    angular.module('app')
         .controller('MainController', ["$scope", 'github', '$interval', '$log', '$anchorScroll', '$location', MainController]);
 
 }()); // end IFFE
