@@ -1,10 +1,9 @@
-// Directives & Views
-// filters - Basic format:expression |filterName:parameter
+// Controller
 
 (function() {
 
     // controller
-    function MainController($scope, $http, $interval, $log) {
+    function MainController($scope, $http, $interval, $log, $anchorScroll, $location) {
 
         function onUserComplete(response) {
             $scope.user = response.data;
@@ -14,6 +13,8 @@
 
         var onRepos = function(response) {
             $scope.repos = response.data;
+            $location.hash("userDetails");
+            $anchorScroll();
         }
 
         function onError(reason) {
@@ -51,6 +52,6 @@
     };
 
     angular.module('app', [])
-        .controller('MainController', ["$scope", '$http', '$interval','$log', MainController]);
+        .controller('MainController', ["$scope", '$http', '$interval','$log','$anchorScroll', '$location', MainController]);
 
 }()); // end IFFE
