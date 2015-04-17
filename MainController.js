@@ -21,6 +21,7 @@
                 $interval.cancel(countdownInterval);
                 $scope.countdown = null;
             }
+            $location.path("/user/" + username);
         };
 
         $scope.username = "angular"
