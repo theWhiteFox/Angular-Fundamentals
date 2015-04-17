@@ -24,6 +24,8 @@
             $location.path("/user/" + username);
         };
 
+        $scope.click
+
         $scope.username = "angular"
         $scope.countdown = 5;
         startCountdown();
