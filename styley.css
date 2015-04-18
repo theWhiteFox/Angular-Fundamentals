@@ -2,5 +2,10 @@ body  {
   font-family: 'Roboto', serif;
   font-size: 1rem;
   line-height: 160%;
-  *zoom: 1;
+  *zoom: 1; 
+}
+.ng-scope{
+	background-color: beige;
+	width: 50%;
+	margin: auto;
 }
