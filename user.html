@@ -1,7 +1,8 @@
 <div>
     <h2>{{user.name}}</h2> {{ error }}
     <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
-    <br>Order:
+    <!-- <br>GitHub: <a href="{{user}}">GitHub</a> -->
+    <br>Order Repositories by:
     <select ng-model="repoSortOrder">
         <option value="+name">Name</option>
         <option value="-stargazers_count">Stars</option>
