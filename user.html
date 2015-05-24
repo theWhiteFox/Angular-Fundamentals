@@ -1,13 +1,14 @@
 <div>
-    <h2>{{user.name}}</h2> {{ error }}
+    <h3>{{user.name}}</h3> {{ error }}
     <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
     <!-- <br>GitHub: <a href="{{user}}">GitHub</a> -->
-    <br>Order Repositories by:
+    <br><h3>Order Repos by:
     <select ng-model="repoSortOrder">
         <option value="+name">Name</option>
         <option value="-stargazers_count">Stars</option>
         <option value="+language">Language</option>
     </select>
+  </h3>
 </div><br>
 <table>
     <thread>

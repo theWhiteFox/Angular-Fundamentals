@@ -1,11 +1,11 @@
 body  {
-  font-family: 'Roboto', serif;
-  font-size: 1rem;
-  line-height: 160%;
+  font-family: 'Droid Sans', serif;
+  font-size: 16px;
+  /*line-height: 160%;*/
   margin-left: auto;
    margin-right: auto;
    /*width: 95%;*/
-   background-color: #E0D6C7;
+   background-color: #EFEAE1;
    text-align: center;
 }
 .ng-scope{
@@ -14,18 +14,23 @@ body  {
    margin-right: auto;
    padding:0%;
 }
+tr{
 
+}
 th{
   text-align: left;
   padding: 8px 12px;
-   border-bottom: 1px black solid;
+  background-color: #E0D6C7;
 
 }
 td{
   border-bottom: 1px dotted black;
   padding: 8px 12px;
   text-align: left;
+
 }
+a{font-weight: bold;}
+
 ul{
 margin: 0;
 padding: 0;
@@ -43,7 +48,16 @@ img{
   text-align: center;
 }
 .ng-scope table{
-  width: 80%;
-  border: 1px solid black;
+  font-size: 16px;
+  width: 95%;
   border-radius: 7px 7px 3px 3px;
+}
+select{
+  font-size:100%;
+}
+input {
+  font-size: 130%;
+  box-sizing:border-box;
+   padding:8px;
+   border:2px solid #cce;
 }
