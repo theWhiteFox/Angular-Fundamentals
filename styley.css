@@ -6,6 +6,7 @@ body  {
    margin-right: auto;
    width: 90%;
    background-color: #E0D6C7;
+   text-align: center;
 }
 .ng-scope{
 	width: 100%;
@@ -22,9 +23,21 @@ th{
 td{
   border-bottom: 1px dashed black;
   padding-bottom: 8px;
+  text-align: left;
 }
 ul{
 margin: 0;
 padding: 0;
 list-style-type: none;
+}
+h1, h2{
+  text-align: center;
+}
+img{
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.text {
+  text-align: center;
 }
