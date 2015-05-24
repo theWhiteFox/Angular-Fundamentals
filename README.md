@@ -1,7 +1,7 @@
 ### Angular-Fundamentals
 
 #### Two Requirements
-- Add a <script> tag pointing to angular.js
+- Add a script tag pointing to angular.js
 - Add an ng-app attribute in your HTML
 - ng-app is an angular directive
 - The ng is short for Angular
