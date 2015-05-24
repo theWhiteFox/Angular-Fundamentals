@@ -2,10 +2,29 @@ body  {
   font-family: 'Roboto', serif;
   font-size: 1rem;
   line-height: 160%;
-  *zoom: 1; 
+  margin-left: auto;
+   margin-right: auto;
+   width: 90%;
+   background-color: #E0D6C7;
 }
 .ng-scope{
-	background-color: beige;
-	width: 50%;
-	margin: auto;
+	width: 100%;
+  margin-left: auto;
+   margin-right: auto;
+   padding:0%;
+}
+
+th{
+  text-align: left;
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
+}
+td{
+  border-bottom: 1px dashed black;
+  padding-bottom: 8px;
+}
+ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
 }

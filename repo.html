@@ -1,4 +1,4 @@
-<h2>{{repo.name}}</h2> 
+<h2>{{repo.name}}</h2>
 {{ error }}
 <div>
     Issues: {{repo.open_issues_count}}
@@ -8,10 +8,10 @@
     <ul>
         <li ng-repeat="user in repo.contributors">
             <img src="{{user.avatar_url}}" alt="{{ user.login }}">
-            {{ user.login }}
+            <br>{{ user.login }}
         </li>
     </ul>
 </div>
 
-<a href="#/main">Back to search</a>
+<a href="#/main">Back to search</a><br>
 <a href="#/user/{{repo.owner.login}}">Back to {{repo.owner.login}}</a>
