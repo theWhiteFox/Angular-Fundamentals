@@ -27,7 +27,7 @@
         $scope.click
 
         $scope.username = "theWhiteFox"
-        $scope.countdown = 99;
+        $scope.countdown = 11;
         startCountdown();
 
     };
