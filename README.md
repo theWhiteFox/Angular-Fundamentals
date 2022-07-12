@@ -1,4 +1,6 @@
-### Angular-Fundamentals
+# Angular GitHub Viewer
+
+Search GitHub for GitHub user
 
 #### Requirements
 - Add a script tag pointing to angular.js
